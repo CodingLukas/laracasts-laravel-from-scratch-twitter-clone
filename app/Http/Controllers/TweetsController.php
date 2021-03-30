@@ -3,18 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Tweet;
-use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class TweetsController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public function store()
     {
-        $this->middleware('auth');
+        $attributes = request()->validate(['body' => 'required|max:255']);
+
+        Tweet::create([
+            'user_id' => auth()->id(),
+            'body' => $attributes['body']
+        ]);
+
+        return redirect('/home');
     }
 
     /**
