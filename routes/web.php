@@ -22,13 +22,15 @@ Route::middleware('auth')->group(function () {
     Route::post('/tweets', 'TweetsController@store');
 
     Route::post(
-        '/profiles/{user:name}/follow',
+        '/profiles/{user:username}/follow',
         'FollowsController@store'
     )->name('follow');
-    Route::get('/profiles/{user:name}/edit', 'ProfilesController@edit')->middleware('can:edit,user');
+    Route::get('/profiles/{user:username}/edit', 'ProfilesController@edit')->middleware('can:edit,user');
+
+    Route::patch('/profiles/{user:username}', 'ProfilesController@update');
 });
 
-Route::get('/profiles/{user:name}', 'ProfilesController@show')->name(
+Route::get('/profiles/{user:username}', 'ProfilesController@show')->name(
     'profile'
 );
 
