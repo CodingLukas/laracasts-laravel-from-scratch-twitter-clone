@@ -24,7 +24,7 @@
                     >
 
                     @error('username')
-                        <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+                    <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
                     @enderror
                 </div>
 
@@ -44,7 +44,7 @@
                     >
 
                     @error('name')
-                        <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+                    <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
                     @enderror
                 </div>
 
@@ -65,7 +65,7 @@
                     >
 
                     @error('email')
-                        <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+                    <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
                     @enderror
                 </div>
 
@@ -85,7 +85,7 @@
                     >
 
                     @error('password')
-                        <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+                    <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
                     @enderror
                 </div>
 
@@ -104,7 +104,7 @@
                     >
 
                     @error('password_confirmation')
-                        <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+                    <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
                     @enderror
                 </div>
 
